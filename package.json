@@ -1,0 +1,63 @@
+{
+  "name": "tasks-functions",
+  "displayName": "Tasks Functions",
+  "description": "My tasks functions",
+  "version": "0.0.2",
+  "publisher": "jigarmistry",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.sayHello",
+    "onCommand:extension.backuptasks",
+    "onCommand:extension.showtasks",
+    "onCommand:extension.opentasks",
+    "onCommand:extension.dateadd"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [{
+      "command": "extension.sayHello",
+      "title": "Hello World"
+    }, {
+      "command": "extension.backuptasks",
+      "title": "Backup Tasks"
+    }, {
+      "command": "extension.showtasks",
+      "title": "Show Tasks"
+    }, {
+      "command": "extension.opentasks",
+      "title": "Open Tasks"
+    }, {
+      "command": "extension.dateadd",
+      "title": "Add Date"
+    }],
+    "keybindings": [{
+      "command": "extension.dateadd",
+      "key": "ctrl+shift+D"
+    }],
+    "configuration": {
+      "type": "object",
+      "title": "General Extension Configuration",
+      "properties": {
+        "mytasks.year": {
+          "type": "string",
+          "default": "2016",
+          "description": "Task file year"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "vscode": "^0.11.0"
+  },
+  "dependencies": {
+    "simple-ssh": "^0.9.0"
+  }
+}
