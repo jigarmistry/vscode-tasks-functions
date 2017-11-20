@@ -7,38 +7,53 @@
   "engines": {
     "vscode": "^1.0.0"
   },
-  "categories": [
-    "Other"
-  ],
+  "categories": ["Other"],
   "activationEvents": [
     "onCommand:extension.sayHello",
     "onCommand:extension.backuptasks",
     "onCommand:extension.showtasks",
     "onCommand:extension.opentasks",
-    "onCommand:extension.dateadd"
+    "onCommand:extension.dateadd",
+    "onCommand:extension.edtcalc"
   ],
   "main": "./extension",
   "contributes": {
-    "commands": [{
-      "command": "extension.sayHello",
-      "title": "Hello World"
-    }, {
-      "command": "extension.backuptasks",
-      "title": "Backup Tasks"
-    }, {
-      "command": "extension.showtasks",
-      "title": "Show Tasks"
-    }, {
-      "command": "extension.opentasks",
-      "title": "Open Tasks"
-    }, {
-      "command": "extension.dateadd",
-      "title": "Add Date"
-    }],
-    "keybindings": [{
-      "command": "extension.dateadd",
-      "key": "ctrl+shift+D"
-    }],
+    "commands": [
+      {
+        "command": "extension.sayHello",
+        "title": "Hello World"
+      },
+      {
+        "command": "extension.backuptasks",
+        "title": "Backup Tasks"
+      },
+      {
+        "command": "extension.showtasks",
+        "title": "Show Tasks"
+      },
+      {
+        "command": "extension.opentasks",
+        "title": "Open Tasks"
+      },
+      {
+        "command": "extension.dateadd",
+        "title": "Add Date"
+      },
+      {
+        "command": "extension.edtcalc",
+        "title": "Editor Calculator"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.dateadd",
+        "key": "ctrl+shift+D"
+      },
+      {
+        "command": "extension.edtcalc",
+        "key": "Ctrl+Alt+c"
+      }
+    ],
     "configuration": {
       "type": "object",
       "title": "General Extension Configuration",
@@ -48,9 +63,9 @@
           "default": "2016",
           "description": "Task file year"
         },
-        "mytasks.folder":{
-          "type":"string",
-          "default":"/Users/jigarmistry/Documents/tasks",
+        "mytasks.folder": {
+          "type": "string",
+          "default": "/Users/jigarmistry/Documents/tasks",
           "description": "Task Folder"
         }
       }
