@@ -47,6 +47,11 @@
           "type": "string",
           "default": "2016",
           "description": "Task file year"
+        },
+        "mytasks.folder":{
+          "type":"string",
+          "default":"/Users/jigarmistry/Documents/tasks",
+          "description": "Task Folder"
         }
       }
     }
